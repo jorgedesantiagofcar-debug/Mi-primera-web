@@ -1,1 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enduro MTB Pro - Estilo Red Bull / Trek</title>
+    <!-- Bootstrap para estructura rápida -->
+    <link href="https://cdn.jsdelivr.net" rel="stylesheet">
+    <style>
+        :root {
+            --redbull-navy: #000b29;
+            --trek-red: #ff0000;
+            --dark-bg: #111;
+        }
+        body { font-family: 'Arial Black', sans-serif; background-color: var(--dark-bg); color: white; }
+        
+        /* Hero Section estilo Red Bull */
+        .hero {
+            height: 80vh;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('https://images.unsplash.com'); /* Imagen de enduro */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border-bottom: 5px solid var(--trek-red);
+        }
+        .hero h1 { font-size: 5rem; text-transform: uppercase; letter-spacing: -2px; }
+        
+        /* Secciones estilo Trek */
+        .bike-card {
+            background: #222;
+            border: none;
+            transition: transform 0.3s;
+            margin-bottom: 30px;
+        }
+        .bike-card:hover { transform: translateY(-10px); border: 1px solid var(--trek-red); }
+        .btn-action { background-color: var(--trek-red); color: white; border-radius: 0; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#">ENDURO <strong>MTB</strong></a>
+  </div>
+</nav>
+
+<header class="hero">
+    <div>
+        <h1>PURA ADRENALINA</h1>
+        <p class="lead">Inspirado en los límites del Red Bull Rampage</p>
+        <a href="#bikes" class="btn btn-action btn-lg">EXPLORAR BICIS</a>
+    </div>
+</header>
+
+<div class="container my-5" id="bikes">
+    <h2 class="text-center mb-5">MODELOS DESTACADOS</h2>
+    <div class="row">
+        <!-- Ejemplo de Bici 1 -->
+        <div class="col-md-4">
+            <div class="card bike-card text-white">
+                <img src="https://images.unsplash.com" class="card-img-top" alt="Enduro Bike">
+                <div class="card-body">
+                    <h5 class="card-title">TREK SLASH GEN 6</h5>
+                    <p class="card-text">Dominio total en los descensos más técnicos.</p>
+                    <button class="btn btn-action">VER DETALLES</button>
+                </div>
+            </div>
+        </div>
+        <!-- Repite para más bicis -->
+    </div>
+</div>
+
+<footer class="py-4 text-center border-top border-secondary">
+    <p>&copy; 2026 Enduro MTB Projects | Creado para GitHub</p>
+</footer>
+
+</body>
+</html>
 
